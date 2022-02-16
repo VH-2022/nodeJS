@@ -12,7 +12,7 @@ var Employee = require('./model/employee');
 mongoose.connect('mongodb://localhost/user');
 // app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(upload.array());
+//app.use(upload.array());
 app.set('view engine', 'pug');
 app.set('views', './views');
 // const data = new Person({
@@ -56,11 +56,16 @@ app.set('views', './views');
 //     else{
 //         console.log(res);
 //     }
-// });
+// }); 
+app.get('/h', async (req, res)=>{
+    res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Shivam Raval ghfgh');
+});
 app.post('/user', async (req, res)=>{
     const formData = await new Person(req.body);
     // console.log(req.body);
-    // res.send("Done");
+     res.send("Done");
     formData.save().then(() => {
         res.status(201).send(user)
     }).catch((error) => {
