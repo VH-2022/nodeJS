@@ -1,0 +1,16 @@
+html
+  head
+    title Express.js + Pug Demo
+  body
+  a(href="/create-user") Create New User
+    table(style='width:100%', border='1')
+        thead 
+            th Id
+            th Name 
+            th Age
+        tbody 
+            each park in user_list
+             tr
+             td= 33
+             td= 1
+                td= park.email

@@ -1,0 +1,3 @@
+{
+    "url":"mongodb://localhost:27017/react?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false"
+}
