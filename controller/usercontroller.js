@@ -16,6 +16,7 @@ exports.list=async (req,res)=>{
 }
 
 exports.createuser = async(req,res)=>{
-    res.render('../view/user/create.pug');
+    const list=await User.find();
+    req.render('../view/user/create.pug', {'user_list':list});
     
 }
