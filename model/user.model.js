@@ -1,7 +1,15 @@
 const mongoose=require('mongoose');
 
 const userschema=new mongoose.Schema({
-    user:{
+    first_name:{
+        type:String,
+        require:true
+    },
+    middle_name:{
+        type:String,
+        
+    },
+    last_name:{
         type:String,
         require:true
     },
@@ -9,15 +17,11 @@ const userschema=new mongoose.Schema({
         type:String,
         require:true
     },
-    date:{
-        type:Date,
-        default:Date.now
-    },
+   
     password:{
         type:String,
         require:true
     },
 });
-console.log("Vishal");
 const newuser=mongoose.model('newuser',userschema);
 module.exports=newuser;

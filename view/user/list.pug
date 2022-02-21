@@ -1,16 +1,23 @@
 html
   head
     title User Listing
+    a(href="/users/create-user") Create New User
   body
-  a(href="/users/create-user") Create New User
-    table(style='width:100%', border='1')
+  
+    table(style='width:100%', border='1',class="table table-bordered")
         thead 
             th Id
-            th Name 
+            th First Name 
+            th Middle Name
+            th Last Name
             th Email
+            th Action
         tbody 
             each users in user_list
              tr
              td= 33
+             td= users.first_name
+             td= users.middle_name
+             td= users.last_name
+             td= users.email
              td= 1
-                td= users.email
