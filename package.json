@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "nexpress": "^4.17.2",
+    "test": "^0.6.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "express",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
